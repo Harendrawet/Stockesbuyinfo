@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tokens Email Helper</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    button, .stock-button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      background-color: #2563eb;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+    }
+    button:hover, .stock-button:hover {
+      background-color: #1e40af;
+    }
+    .stock-section {
+      margin-top: 30px;
+      background-color: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      display: none;
+    }
+    .stock-block {
+      background-color: #334155;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tokens Email Helper</h1>
+  <p>Created by Harendra Singh Kuntal</p>
+
+  <button onclick="alert('Checking token email status...')">Check Email Status</button>
+  <button onclick="toggleStocks()">Stocks</button>
+
+  <div id="stocksSection" class="stock-section">
+    <div class="stock-block">
+      <div class="stock-button">
+        <strong>Total in Stocks</strong><br>
+        Tokens<br>
+        <span id="tokenCount">0</span>
+      </div>
+    </div>
+    <div class="stock-block">
+      <div class="stock-button">
+        <strong>Total Sells = <span id="totalSells">0</span></strong><br>
+        Names: <span id="stockName">-</span><br>
+        Stocks: <span id="stockAmount">-</span><br>
+        Buyes Stocks: <span id="buyesStocks">-</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 Harendra Singh Kuntal</footer>
+
+  <script>
+    function toggleStocks() {
+      const section = document.getElementById("stocksSection");
+      section.style.display = section.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
